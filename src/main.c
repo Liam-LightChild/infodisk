@@ -41,9 +41,9 @@ int main(int argc, char const *argv[])
     printf("      oem: %s\n", by);
 
     fseek(disk, 0xE, SEEK_SET);
-    short *reserved = malloc(sizeof(short));
+    unsigned short *reserved = malloc(sizeof(short));
     fread(reserved, 2, 1, disk);
-    printf("Reserved sectors: %i (%iB)\n", (int)*reserved, *reserved * 512);
+    printf("Reserved sectors: %u (%iB)\n", (int)*reserved, *reserved * 512);
 
     fclose(disk);
     return 0;
