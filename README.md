@@ -1,0 +1,6 @@
+# INFODISK
+
+```bash
+infodisk
+```
+
